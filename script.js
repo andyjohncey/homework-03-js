@@ -79,11 +79,9 @@ function generate() {
 //     console.log(userChoice);
 
 //     return userChoice
-
-
 // }
 function generate ();   
-}
+
 
 
 document.addEventListener("click", myFunction);
