@@ -1,22 +1,22 @@
 
 function generate() {
 
-var charSize = prompt("Choose your password length between 8 and 128 charcaters");
+    var charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
 
 
-if (charSize < 8) {
-    alert("Try another character length");
-    charSize = prompt("Choose your password length between 8 and 128 charcaters");
+    if (charSize < 8) {
+        alert("Try another character length");
+        charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
-} else if (charSize > 128) {
-    alert("Try another character length");
-    charSize = prompt("Choose your password length between 8 and 128 charcaters");
+    } else if (charSize > 128) {
+        alert("Try another character length");
+        charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
-} 
+    }
 
 
-console.log(charSize);
+    console.log(charSize);
 
 
     varupperCase = confirm("Do you want to add 'upercase letters' to your password?");
@@ -52,37 +52,38 @@ console.log(charSize);
     document.getElementById("generate");
 }
 
-var userChoice = "";
+// var userChoice = "";
 
-for (i = 0; i < userChoice.length; i++) {
-    password = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
+// for (i = 0; i < userChoice.length; i++) {
+//     password = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
+// }
+
+// function userChoice() {
+//     if ([uppercase = true], [lowerCase = true], [numChar = true], [specChar = true]) {
+//         userChoice.values([""])
+//     } else if ([upperCase = true], [lowercase = true], [numChar = true], [specChar = false]) {
+//         userChoice = [""], [""], [""], [""]
+//     } else if ([upperCase = true], [lowerCase = true], [numChar = false], [specChar = false]) {
+//         userChoice = [""], [""], [""], [""]
+//     } else if ([upperCase = true], [lowerCase = false], [numChar = false], [specChar = false]) {
+//         userChoice = [""], [""], [""], [""]
+//     } else if ([uppercase = false], [lowerCase = false], [numChar = true], [specChar = false]) {
+//         userChoice = [""], [""], [""], [""]
+//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = true]) {
+//         userChoice
+//     } else if ([upperCase = false], [lowerCase = false], [numChar = true], [specChar = true]) {
+//         userChoice
+//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = false]) {
+//         userChoice
+//     }
+//     console.log(userChoice);
+
+//     return userChoice
+
+
+// }
+function generate ();   
 }
-
-function userChoice() {
-    if ([uppercase = true], [lowerCase = true], [numChar = true], [specChar = true]) {
-        userChoice.values([""])
-    } else if ([upperCase = true], [lowercase = true], [numChar = true], [specChar = false]) {
-        userChoice = [""],[""],[""],[""]
-    } else if ([upperCase = true], [lowerCase = true], [numChar = false], [specChar = false]) {
-        userChoice = [""],[""],[""],[""]
-    } else if ([upperCase = true], [lowerCase = false], [numChar = false], [specChar = false]) {
-        userChoice = [""],[""],[""],[""]
-    } else if ([uppercase = false], [lowerCase = false], [numChar = true], [specChar = false]) {
-        userChoice = [""],[""],[""],[""]
-    } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = true]) {
-        userChoice
-    } else if ([upperCase = false], [lowerCase = false], [numChar = true], [specChar = true]) {
-        userChoice 
-    } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = false]) {
-        userChoice 
-    }
-    console.log(userChoice);
-
-    return userChoice
-
-
-}
-
 
 
 document.addEventListener("click", myFunction);
