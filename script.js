@@ -1,7 +1,7 @@
 
 function generate() {
 
-charSize = prompt("Choose your password length between 8 and 128 charcaters");
+var charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
 
 
