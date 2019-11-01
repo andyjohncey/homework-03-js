@@ -13,8 +13,7 @@ if (charSize < 8) {
     alert("Try another character length");
     charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
-} else;
-
+} 
 
 
 console.log(charSize);
