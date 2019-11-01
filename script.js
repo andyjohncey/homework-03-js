@@ -1,22 +1,18 @@
 
-
-document.addEventListener("click", generate);
-
-
 function generate() {
 
-length = prompt("Choose your password length between 8 and 128 charcaters");
+charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
 
 
 var charSize = length.value;
-if (length < 8) {
+if (charSize < 8) {
     alert("Try another character length");
-    length = prompt("Choose your password length between 8 and 128 charcaters");
+    charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
-} else if (length > 128) {
+} else if (charSize > 128) {
     alert("Try another character length");
-    length = prompt("Choose your password length between 8 and 128 charcaters");
+    charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
 } else;
 
@@ -58,36 +54,36 @@ console.log(charSize);
     document.getElementById("generate");
 }
 
-// var userChoice = "";
+var userChoice = "";
 
-// for (i = 0; i < userChoice.length; i++) {
-//     password = userChoice.charAt(Math.floor(Math.random() * Math.floor(charSize.length - 1)));
-// }
+for (i = 0; i < userChoice.length; i++) {
+    password = userChoice.charAt(Math.floor(Math.random() * Math.floor(charSize.length - 1)));
+}
 
-// function userChoice() {
-//     if ([uppercase = true], [lowerCase = true], [numChar = true], [specChar = true]) {
-//         userChoice.values([""])
-//     } else if ([upperCase = true], [lowercase = true], [numChar = true], [specChar = false]) {
-//         userChoice = [""],[""],[""],[""]
-//     } else if ([upperCase = true], [lowerCase = true], [numChar = false], [specChar = false]) {
-//         userChoice = [""],[""],[""],[""]
-//     } else if ([upperCase = true], [lowerCase = false], [numChar = false], [specChar = false]) {
-//         userChoice = [""],[""],[""],[""]
-//     } else if ([uppercase = false], [lowerCase = false], [numChar = true], [specChar = false]) {
-//         userChoice = [""],[""],[""],[""]
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = true]) {
-//         userChoice
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = true], [specChar = true]) {
-//         userChoice 
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = false]) {
-//         userChoice 
-//     }
-//     console.log(userChoice);
+function userChoice() {
+    if ([uppercase = true], [lowerCase = true], [numChar = true], [specChar = true]) {
+        userChoice.values([""])
+    } else if ([upperCase = true], [lowercase = true], [numChar = true], [specChar = false]) {
+        userChoice = [""],[""],[""],[""]
+    } else if ([upperCase = true], [lowerCase = true], [numChar = false], [specChar = false]) {
+        userChoice = [""],[""],[""],[""]
+    } else if ([upperCase = true], [lowerCase = false], [numChar = false], [specChar = false]) {
+        userChoice = [""],[""],[""],[""]
+    } else if ([uppercase = false], [lowerCase = false], [numChar = true], [specChar = false]) {
+        userChoice = [""],[""],[""],[""]
+    } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = true]) {
+        userChoice
+    } else if ([upperCase = false], [lowerCase = false], [numChar = true], [specChar = true]) {
+        userChoice 
+    } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = false]) {
+        userChoice 
+    }
+    console.log(userChoice);
 
-//     return userChoice
+    return userChoice
 
 
-// }
+}
 
 
 
