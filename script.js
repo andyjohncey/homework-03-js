@@ -80,7 +80,7 @@ function generate() {
 
 //     return userChoice
 // }
-generate.function();   
+generate();   
 
 
 
