@@ -42,13 +42,11 @@ function generate() {
 
         var generate = document.getElementById("password");
 
-        generate.select();
+        password();
 
-        document.execCommand("generate");
         console.log(generate);
 
-        return password;
-    }
+        }
     document.getElementById("generate");
 }
 
