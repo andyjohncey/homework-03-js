@@ -5,7 +5,6 @@ var charSize = prompt("Choose your password length between 8 and 128 charcaters"
 
 
 
-var charSize = length.value;
 if (charSize < 8) {
     alert("Try another character length");
     charSize = prompt("Choose your password length between 8 and 128 charcaters");
@@ -34,8 +33,8 @@ console.log(charSize);
 
     var password = "";
 
-    for (i = 0; i < charSize.length; i++) {
-        var random = userChoice.charAt(Math.floor(Math.random() * Math.floor(charSize.length - 1)));
+    for (i = 0; i < i.length; i++) {
+        var random = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
 
         password = random + password;
 
@@ -57,7 +56,7 @@ console.log(charSize);
 var userChoice = "";
 
 for (i = 0; i < userChoice.length; i++) {
-    password = userChoice.charAt(Math.floor(Math.random() * Math.floor(charSize.length - 1)));
+    password = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
 }
 
 function userChoice() {
