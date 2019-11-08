@@ -99,8 +99,9 @@ function myCopyFunction() {
     copyText.setSelectionRange(0, 999)
     document.execCommand("copy");
     function mycopyfunction2(){
-        if()
-    alert("Copied the text: " + copyText.value);
+        if(document.execCommand = true){
+    alert("Copied the text: " + copyText.value);}
   }
+}
   myCopyFunction();
   
