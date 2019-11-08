@@ -4,7 +4,6 @@ function generate() {
     var charSize = prompt("Choose your password length between 8 and 128 charcaters");
 
 
-
     if (charSize < 8) {
         alert("Try another character length");
         charSize = prompt("Choose your password length between 8 and 128 charcaters");
@@ -15,89 +14,68 @@ function generate() {
 
     }
 
-
     console.log(charSize);
 
+    var hasUpperCase = confirm("Do you want to add 'uppercase letters' to your password?");
+    var hasLowerCase = confirm("Do you want to add 'lowercase letters' to your password?");
+    var hasNumChar = confirm("Do you want to add 'numbers' to your password?");
+    var hasSpecChar = confirm("Do you want to add 'special characters' to your password?");
 
-    var upperCase = confirm("Do you want to add 'upercase letters' to your password?");
-    var lowerCase = confirm("Do you want to add 'lowercase letters' to your password?");
-    var numChar = confirm("Do you want to add 'numbers' to your password?");
-    var specChar = confirm("Do you want to add 'special characters' to your password?");
+    var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var specChar = ["`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "?"];
 
-    upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    specChar = ["`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "<", ">", "?"];
+    // 
+    var availableCharacter = [];
+    if (hasUpperCase === true) {
+        availableCharacter = upperCase.concat(availableCharacter);
+    }
+    if (hasLowerCase === true) {
+        availableCharacter = lowerCase.concat(availableCharacter);
+    }
+    if (hasNumChar === true) {
+        availableCharacter = numChar.concat(availableCharacter);
+    }
+    if (hasSpecChar === true) {
+        availableCharacter = specChar.concat(availableCharacter);
+    }
+
 
 
     var password = "";
 
-    for (i = 0; i < i.length; i++) {
-        var random = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
+    for (let index = 0; index < charSize; index++) {
+        var character = availableCharacter[Math.round(Math.random() * (availableCharacter.length - 1))];
+        password = password + character;
+    }
 
-        password = random + password;
+    console.log(password);
+
+    document.getElementById("generate").addEventListener("click", myFunction);
+
+    document.addEventListener("click", myFunction)
 
 
-        console.log(password)
+    function myFunction() {
+        document.getElementById("password").innerHTML = password;
+    }
 
-        var generate = document.getElementById("password");
+    // console.log(myFunction);
 
-        password();
-
-        console.log(generate);
-
-        }
-    document.getElementById("generate");
 }
 
-// var userChoice = "";
+generate();
 
-// for (i = 0; i < userChoice.length; i++) {
-//     password = userChoice.charAt(Math.floor(Math.random() * Math.floor(i.length - 1)));
-// }
+// document.getElementById("copy").addEventListener("click", myFunctionCopy);
+// document.addEventListener("click", myFunctionCopy);
 
-// function userChoice() {
-//     if ([uppercase = true], [lowerCase = true], [numChar = true], [specChar = true]) {
-//         userChoice.values([""])
-//     } else if ([upperCase = true], [lowercase = true], [numChar = true], [specChar = false]) {
-//         userChoice = [""], [""], [""], [""]
-//     } else if ([upperCase = true], [lowerCase = true], [numChar = false], [specChar = false]) {
-//         userChoice = [""], [""], [""], [""]
-//     } else if ([upperCase = true], [lowerCase = false], [numChar = false], [specChar = false]) {
-//         userChoice = [""], [""], [""], [""]
-//     } else if ([uppercase = false], [lowerCase = false], [numChar = true], [specChar = false]) {
-//         userChoice = [""], [""], [""], [""]
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = true]) {
-//         userChoice
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = true], [specChar = true]) {
-//         userChoice
-//     } else if ([upperCase = false], [lowerCase = false], [numChar = false], [specChar = false]) {
-//         userChoice
-//     }
-//     console.log(userChoice);
+// alert("password copied to clipboard!:" + copy.value);
 
-//     return userChoice
-// }
-generate();   
+// console.log(copy);
 
 
-
-document.addEventListener("click", myFunction);
-
-function myFunction() {
-    document.getElementById("password").innerHTML += "passphrase!";
-}
-
-console.log(generate);
-
-
-// document.addEventListener("click", someOtherFunction () {
-//     document.getElementById("copy");
-//     alert("password copied to clipboard!:" + copy.value);
-//     console.log(copy);
-// });
-
-// function copy() {
+// function myFunctionCopy() {
 //     /* Get the text field */
 //     var copy = document.getElementById("password");
 
@@ -107,5 +85,22 @@ console.log(generate);
 //     document.execCommand("copy to clipboard");
 
 //     /* Alert the copied text */
-//     alert("password copied to clipboard!:" + copy.value);
+//     // alert("password copied to clipboard!:" + copy.value);
+//     console.log(this);
 // }
+// console.log(myFunctionCopy);
+
+document.getElementById("copytoclipboard").addEventListener("click", myCopyFunction);
+document.addEventListener("click", myCopyFunction);
+
+function myCopyFunction() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 999)
+    document.execCommand("copy");
+    function mycopyfunction2(){
+        if()
+    alert("Copied the text: " + copyText.value);
+  }
+  myCopyFunction();
+  
